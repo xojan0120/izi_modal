@@ -1,0 +1,6 @@
+- if @status == 'success'
+  | $("tbody").append("#{j(render("tr", user: @user))}");
+  | $('#modal-default').iziModal('close');
+- elsif @status == 'fail'
+  | alert('error!');
+

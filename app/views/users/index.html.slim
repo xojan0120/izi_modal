@@ -1,0 +1,41 @@
+h1 Listing users
+
+table
+  thead
+    tr
+      th Name
+      th
+      th
+      th
+
+  tbody
+    - @users.each do |user|
+      tr
+        td = user.name
+        td = link_to 'Show', user
+        td = link_to 'Edit', edit_user_path(user)
+        td = link_to 'Destroy', user, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New User', new_user_path
+
+br 
+/button.open-default.button クリック
+/= link_to 'test', new_user_path, class: "open-default"
+= link_to 'test', new_user_path, remote: true
+#modal-default
+
+/#modal-default
+/  .close style="text-align:right;padding:10px"
+/    a data-izimodal-close=""
+/      span.glyphicon.glyphicon-trash style="text-decration:none"
+/  p style="padding: 20px" てすと
+
+/ これはapplication.jsのwindow.loadで書く
+/ javascript:
+/   $(document).on('click', '.open-default', function(event) {
+/     event.preventDefault();
+/     $('#modal-default').iziModal('open');
+/   });
+/   $('#modal-default').iziModal();
