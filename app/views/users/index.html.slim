@@ -21,10 +21,13 @@ br
 = link_to 'New User', new_user_path
 
 br 
-/button.open-default.button クリック
-/= link_to 'test', new_user_path, class: "open-default"
+
 = link_to 'test', new_user_path, remote: true
+
 #modal-default
+
+javascript:
+  $('#modal-default').iziModal({padding:20});
 
 /#modal-default
 /  .close style="text-align:right;padding:10px"

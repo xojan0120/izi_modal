@@ -15,17 +15,3 @@
 //= require bootstrap
 //= require turbolinks
 //= require_tree .
-
-//$(document).ready(function() {
-//  $(document).on('click', '.open-default', function(event) {
-//    event.preventDefault();
-//    $('#modal-default').iziModal('open');
-//  });
-//  $('#modal-default').iziModal();
-//});
-
-// 初期化
-$(document).ready(function() {
-  $('#modal-default').iziModal();
-});
-
